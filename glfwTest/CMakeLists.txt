@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.8)
+PROJECT(HELLO)
+SET(SRC_LIST main.cpp)
+INCLUDE_DIRECTORIES("${CMAKE_SOURCE_DIR}"/include)
+LINK_DIRECTORIES("${CMAKE_SOURCE_DIR}/lib")
+ADD_EXECUTABLE(hello.html ${SRC_LIST})
+TARGET_LINK_LIBRARIES(hello.html libglfw3.a libX11.a libdl.a pthread libXi.a libXrandr.a libXcursor.a libXinerama.a libXext.a)
